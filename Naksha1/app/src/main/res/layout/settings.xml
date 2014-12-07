@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/host_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/home"
+        android:paddingLeft="15dp"
+        android:paddingTop="0dp"
+        android:text="host"
+        android:textColor="#a5d4e2"
+        android:textSize="25sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/port_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/home"
+        android:layout_toRightOf="@+id/host_input"
+        android:paddingTop="0dp"
+        android:text="port"
+        android:textColor="#a5d4e2"
+        android:textSize="25sp"
+        android:textStyle="normal" />
+
+    <EditText
+        android:id="@+id/host_input"
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/host_label"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:drawable/editbox_background"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/port_input"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/host_label"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@id/host_input"
+        android:background="@android:drawable/editbox_background"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/username_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/host_input"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:text="username"
+        android:textColor="#a5d4e2"
+        android:textSize="25sp"
+        android:textStyle="normal" />
+
+    <EditText
+        android:id="@+id/username_input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/username_label"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:drawable/editbox_background"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:id="@+id/password_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username_input"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:text="password"
+        android:textColor="#a5d4e2"
+        android:textSize="25sp"
+        android:textStyle="normal" />
+
+    <EditText
+        android:id="@+id/password_input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password_label"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:drawable/editbox_background"
+        android:inputType="textPassword" />
+
+    <ImageView
+        android:id="@+id/home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="false"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="15dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/home" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_input"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:text="   login   "
+        android:textSize="18sp" >
+    </Button>
+
+</RelativeLayout>

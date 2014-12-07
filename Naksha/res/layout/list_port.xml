@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) 2009-2010 Aubort Jean-Baptiste (Rorist)
+ Licensed under GNU's GPL 2, see README
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_ports"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="3dip"
+    android:focusable="false"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical">
+
+        <TextView android:id="@+id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="0/tcp (service)"
+            style="@style/ListTextTitle" />
+
+        <TextView android:id="@+id/banner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Banner"
+            android:maxLines="2"
+            style="@style/ListTextSummary" />
+
+    </LinearLayout>
+        
+    <Button
+        android:id="@+id/list_connect"
+        android:layout_gravity="center_vertical"
+        style="@style/ButtonConnect" />
+
+</LinearLayout>

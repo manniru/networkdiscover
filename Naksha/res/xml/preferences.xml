@@ -1,0 +1,160 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<!--
+ Copyright (C) 2009-2010 Aubort Jean-Baptiste (Rorist)
+ Licensed under GNU's GPL 2, see README
+-->
+<PreferenceCategory
+    android:title="@string/btn_options">
+    
+    <PreferenceScreen
+        android:title="@string/preferences_advanced"
+        android:summary="">
+        <ListPreference
+            android:key="interface"
+            android:title="@string/preferences_intf_title"
+            android:summary="@string/preferences_intf_summary"
+            android:dialogTitle="@string/preferences_intf_title"
+            android:defaultValue="0" />
+        <CheckBoxPreference
+            android:key="resolve_name"
+            android:title="@string/preferences_resolve_name_title"
+            android:summary="@string/preferences_resolve_name_summary"
+            android:defaultValue="true" />
+        <CheckBoxPreference
+            android:key="vibrate_finish"
+            android:title="@string/preferences_vibrate_title"
+            android:summary="@string/preferences_vibrate_summary"
+            android:defaultValue="false" />
+        <Preference
+            android:key="resetdb"
+            android:title="@string/preferences_resetdb_title"
+            android:summary="@string/preferences_resetdb_summary"
+            android:defaultValue="1"/>
+    </PreferenceScreen>
+    
+    <PreferenceScreen
+        android:title="@string/preferences_discover"
+        android:summary="">
+        <ListPreference
+            android:key="discovery_method"
+            android:title="@string/preferences_discover_method_title"
+            android:summary="@string/preferences_discover_method_summary"
+            android:entries="@array/method_discover_name"
+            android:entryValues="@array/method_discover_value"
+            android:dialogTitle="@string/preferences_discover_method_title_dialog"
+            android:defaultValue="0"/>
+        <CheckBoxPreference
+            android:key="ip_custom"
+            android:title="@string/preferences_ip_custom_title"
+            android:summary="@string/preferences_ip_custom_summary"
+            android:defaultValue="false" />
+        <EditTextPreference
+            android:key="ip_start"
+            android:title="@string/preferences_ip_start_title"
+            android:summary="@string/preferences_ip_start_summary"
+            android:inputType="phone"
+            android:dependency="ip_custom" />
+        <EditTextPreference
+            android:key="ip_end"
+            android:title="@string/preferences_ip_end_title"
+            android:summary="@string/preferences_ip_end_summary"
+            android:inputType="phone"
+            android:dependency="ip_custom" />
+        <CheckBoxPreference
+            android:key="cidr_custom"
+            android:title="@string/preferences_cidr_custom_title"
+            android:summary="@string/preferences_cidr_custom_summary"
+            android:defaultValue="false" />
+        <EditTextPreference
+            android:key="cidr"
+            android:title="@string/preferences_cidr"
+            android:summary="@string/preferences_cidr"
+            android:inputType="number" 
+            android:dependency="cidr_custom" />
+        <CheckBoxPreference
+            android:key="ratecontrol_enable"
+            android:title="@string/preferences_ratecontrol_enable_title"
+            android:summary="@string/preferences_ratecontrol_enable_summary"
+            android:defaultValue="true" />
+        <EditTextPreference
+            android:key="timeout_discover"
+            android:title="@string/preferences_timeout_discover_title"
+            android:summary="@string/preferences_timeout_discover_summary"
+            android:defaultValue="500"
+            android:inputType="number" />
+        <CheckBoxPreference
+            android:key="allow_mobile"
+            android:title="@string/preferences_allow_mobile_title"
+            android:summary="@string/preferences_allow_mobile_summary"
+            android:defaultValue="false" />
+        <!--<EditTextPreference
+            android:key="nthreads"
+            android:title="@string/preferences_threads_title"
+            android:summary="@string/preferences_threads_summary"
+            android:defaultValue="8"
+            android:inputType="number" />-->
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="@string/preferences_portscan"
+        android:summary="">
+        <CheckBoxPreference
+            android:key="banner"
+            android:title="@string/preferences_banner_title"
+            android:summary="@string/preferences_banner_summary"
+            android:defaultValue="true" />
+        <EditTextPreference
+            android:key="port_start"
+            android:title="@string/preferences_port_start_title"
+            android:summary="@string/preferences_port_start_summary"
+            android:defaultValue="1"
+            android:inputType="number" />
+        <EditTextPreference
+            android:key="port_end"
+            android:title="@string/preferences_port_end_title"
+            android:summary="@string/preferences_port_end_summary"
+            android:defaultValue="1024"
+            android:inputType="number" />
+        <EditTextPreference
+            android:key="ssh_user"
+            android:title="@string/preferences_ssh_user_title"
+            android:summary="@string/preferences_ssh_user_summary"
+            android:defaultValue="root" />
+        <CheckBoxPreference
+            android:key="timeout_force"
+            android:title="@string/preferences_timeout_force_title"
+            android:summary="@string/preferences_timeout_force_summary"
+            android:defaultValue="false" />
+        <EditTextPreference
+            android:key="timeout_portscan"
+            android:title="@string/preferences_timeout_title"
+            android:summary="@string/preferences_timeout_summary"
+            android:defaultValue="500"
+            android:inputType="number"
+            android:dependency="timeout_force" />
+    </PreferenceScreen>
+    
+    <Preference
+        android:key="wifi"
+        android:title="Wifi"/>
+    
+</PreferenceCategory>
+
+<PreferenceCategory
+    android:title="@string/preferences_credits">
+    <Preference
+        android:key="donate"
+        android:layout="@layout/donate" />
+    <Preference
+        android:key="website"
+        android:title="@string/preferences_website_title"/>
+    <Preference
+        android:key="email"
+        android:title="@string/preferences_email_title"/>
+    <Preference
+        android:key="version"
+        android:title="@string/preferences_version_title"/>
+</PreferenceCategory>
+
+</PreferenceScreen>
